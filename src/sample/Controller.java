@@ -10,6 +10,7 @@ import javafx.scene.control.TextArea;
 public class Controller {
 
         private String splitResultField[], resultFieldNew;
+        private double num1, num2,result;
 
         @FXML
         private ResourceBundle resources;
@@ -127,33 +128,34 @@ public class Controller {
                     }
                 }
                 if (operation.equals("+")) {
-                    double num1 = Double.parseDouble(splitResultField[0]);
-                    double num2 = Double.parseDouble(splitResultField[1]);
+                    num1 = Double.parseDouble(splitResultField[0]);
+                    num2 = Double.parseDouble(splitResultField[1]);
 
-                    double result = num1 + num2;
+                    result = num1 + num2;
                     resultField.setText(Double.toString(result));
                 } else if (operation.equals("-")) {
-                    double num1 = Double.parseDouble(splitResultField[0]);
-                    double num2 = Double.parseDouble(splitResultField[1]);
+                    num1 = Double.parseDouble(splitResultField[0]);
+                    num2 = Double.parseDouble(splitResultField[1]);
 
-                    double result = num1 - num2;
+                    result = num1 - num2;
                     resultField.setText(Double.toString(result));
                 } else if (operation.equals("x")) {
-                    double num1 = Double.parseDouble(splitResultField[0]);
-                    double num2 = Double.parseDouble(splitResultField[1]);
+                    num1 = Double.parseDouble(splitResultField[0]);
+                    num2 = Double.parseDouble(splitResultField[1]);
 
-                    double result = num1 * num2;
+                    result = num1 * num2;
                     resultField.setText(Double.toString(result));
                 } else if (operation.equals("÷")){
-                    double num1 = Double.parseDouble(splitResultField[0]);
-                    double num2 = Double.parseDouble(splitResultField[1]);
+                    num1 = Double.parseDouble(splitResultField[0]);
+                    num2 = Double.parseDouble(splitResultField[1]);
 
-                    double result = num1 / num2;
+                    result = num1 / num2;
                     if (num2 == 0) {
                         resultField.setText("ERROR");
                     } else {
                         resultField.setText(Double.toString(result));
                     }
+
                 }
             });
         }
